@@ -29,6 +29,12 @@ type Tokens struct {
 	Refresh_token string
 }
 
+type FavorRequest struct {
+	Creator_id   string `json:"creator"`
+	Recipient_id string `json:"recipient"`
+	Favor_text   string `json:"favortext"`
+}
+
 type AuthClaims struct {
 	UserName string `json:"userName"`
 	UserId   string `json:"userId"`
