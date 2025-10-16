@@ -23,3 +23,12 @@ func (r *favorsRepo) Create(ctx context.Context, favor *models.FavorRequest) err
 
 	return nil
 }
+
+func (r *favorsRepo) CreateRelationship(ctx context.Context, req *models.RelationShipRequest) error {
+	_, err := r.pool.Exec(ctx, "INSERT into relationship (requester_id, addressee_id,relationship_status) VALUES ($1, $2);", req.Inviter, req.Invitee, "pending")
+	if err != nil {
+		return err
+	}
+
+	return nil
+}

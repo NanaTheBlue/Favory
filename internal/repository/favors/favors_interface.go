@@ -8,4 +8,5 @@ import (
 
 type FavorsRepository interface {
 	Create(ctx context.Context, favor *models.FavorRequest) error
+	CreateRelationship(ctx context.Context, req *models.RelationShipRequest) error
 }

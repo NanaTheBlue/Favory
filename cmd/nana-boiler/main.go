@@ -29,7 +29,7 @@ func main() {
 
 	// Services
 	authService := auth.NewAuthService(authRepo, tokenRepo)
-	favorService := favors.NewFavorService(favorRepo)
+	favorService := favors.NewFavorService(authRepo, favorRepo)
 
 	// Handlers
 	authRegister := authapi.Register(authService)

@@ -26,11 +26,11 @@ func validateHashedPassword(rawPassword string, hashedPassword string) error {
 
 func validateCSRF(csrfCookie string, csrfHeader string) error {
 	if csrfCookie == "" || csrfHeader == "" {
-		return fmt.Errorf("Csrf Validation Failed")
+		return fmt.Errorf("csrf validation failed")
 	}
 
 	if csrfCookie != csrfHeader {
-		return fmt.Errorf("Csrf Validation Failed")
+		return fmt.Errorf("csrf validation failed")
 	}
 	return nil
 }

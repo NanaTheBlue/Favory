@@ -18,6 +18,8 @@ recipient_id UUID REFERENCES users(id),
 favor_text TEXT
 );
 
+
+
 CREATE TABLE IF NOT EXISTS relationship(
 requester_id UUID REFERENCES users(id)
 addressee_id UUID REFERENCES users(id)

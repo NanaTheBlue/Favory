@@ -16,6 +16,11 @@ type RegisterRequest struct {
 	ConfirmPassword string `json:"confirmpassword"`
 }
 
+type RelationShipRequest struct {
+	Inviter string `json:"inviter"`
+	Invitee string `json:"invitee"`
+}
+
 type LoginRequest struct {
 	Email    string `json:"email"`
 	Password string `json:"password"`
